@@ -190,7 +190,7 @@ function outputStruct = export(obj,filePath,varargin)
             for gPosInd = 1:obj.sizes.nGPos
                 for rptInd = 1:obj.sizes.nRpts
                     %update the delay name values to the actual delay values for this repeat and grating position
-                    spectraName = spectraName.modify('delay.values',strcat(strtrim(cellstr(num2str(delaySubVal(:,rptInd,gPosInd),3))), ' ', unitStr.wl));
+                    spectraName = spectraName.modify('delay.values',strcat(strtrim(cellstr(num2str(delaySubVal(:,rptInd,gPosInd),3))), {' '}, unitStr.delay));
                     for delayInd = delaySubInds(:,rptInd,gPosInd)'
                         if ~isnan(delayInd)
                             %assign name and data with name autoindexing

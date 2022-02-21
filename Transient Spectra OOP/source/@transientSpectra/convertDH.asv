@@ -83,7 +83,7 @@ function obj = convertDH(obj, dh_static, dh_array)
     end
 
     %get list of acquired schemes
-    %obj.schemes = cell(obj.sizes.nSchemes,1);
+    obj.schemes = cell(obj.sizes.nSchemes,1);
 
        obj.schemes = {dh_array(1).proc_data.dataScheme}; 
 
