@@ -297,9 +297,9 @@ classdef transientSpectra < matlab.mixin.Heterogeneous
             
             %%**GENERATE PLOT**%%
             %add data to x, y plot
-            x = obj.delays;
+            x = mean(obj.delays,[2,3]);
             %avg of rpts and pick the first dataScheme. todo: have case that handles whether to average rpts or not
-            y = mean(obj.spectra(waveInd,:,:,:,1),4); %[pixels, delays, rpts, grating pos, schemes]
+            y = mean(obj.spectra(waveInd,:,:,:,1),3); %[pixels, delays, rpts, grating pos, schemes]
             y = permute(y,[3,2,1,4,5]); %change display priority [delays, schemes, pixels, rpts, grating pos]. todo: figure out if disply priority needs to be different for kinetic traces
             y = reshape(y,obj.sizes.nDelays,[]);    %turns y into a 2d array [delays, everything else] where left most index is most significant
             

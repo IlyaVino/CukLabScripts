@@ -315,6 +315,11 @@ function outputStruct = export(obj,filePath,varargin)
         outputStruct = [outputStruct; waves(~strcmp({waves.name},''))]; 
     end
     
+    %Force all data in outputStruct to be real
+    for ii = 1:length(outputStruct)
+        outputStruct(ii).data = real(outputStruct(ii).data);
+    end
+    
     %Convert outputStruct name to structure with field names and save as a
     %file
     fullNames = {outputStruct.name}';

@@ -70,7 +70,7 @@ classdef fsrs < transientSpectra
             objGsFsrs = objGsFsrs.setUnits('rcm-1','ps','mOD'); %change to raman shift, ps, and raman gain
             objEsFsrs = objEsFsrs.setUnits('rcm-1','ps','mOD'); %change to raman shift, ps, and raman gain
             objEsGsFsrs = objEsGsFsrs.setUnits('rcm-1','ps','mOD'); %change to raman shift, ps, and raman gain
-            objTR = objTR.setUnits('eV','ps','mOD'); %change to raman shift, ps, and raman gain
+            objTR = objTR.setUnits('nm','ps','mOD'); %change to raman shift, ps, and raman gain
             
         end
         
